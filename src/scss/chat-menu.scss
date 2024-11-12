@@ -1,0 +1,165 @@
+.chat-menu {
+  width: 100%;
+  height: 100svh;
+  position: absolute;
+  z-index: 4;
+  right: -1500px;
+  top: 0;
+  background-color: $background-color-secondary--transparent;
+  overflow-y: hidden;
+  transform: translate(1500px);
+  opacity: 0;
+  transition: all 1s ease-in;
+
+  .aside-wrapper {
+    width: 320px;
+    float: right;
+    box-shadow: 16px 0 52px $shadow-color;
+    height: 100%;
+    position: relative;
+    background-color: $background-color-secondary;
+  }
+
+    .chat-button--on {
+      position: fixed;
+      left: 16px;
+      top: 24px;
+      background-image: url('../img/burger-off.svg');
+      z-index: 6;
+    }
+
+    .chat-button--off {
+      display: none;
+    }
+
+    &__button--close {
+      width: 40px;
+      height: 40px;
+      border: none;
+      background-color: $rose-button;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      background-position: center;
+      background-image: url('../img/burger-off.svg');
+      margin: 24px 0 40px 16px;
+  }
+
+  &__label {
+    position: relative;
+    font-size: $font-size--h2;
+    font-weight: $font-weight--bold;
+    margin-bottom: 24px;
+    margin-left: 12px;
+  }
+
+  &__label::before {
+    content: '';
+    position: absolute;
+    background-image: url('../img/highlight-heading.svg');
+    background-repeat: no-repeat;
+    width: 4px;
+    height: 40px;
+    bottom: 2px;
+    left: -12px;
+  }
+
+  &__input {
+    width: 288px;
+    height: 48px;
+    border: 1px solid $border-color--secondary;
+    margin-left: 16px;
+    border-radius: 6px;
+    padding: 12px 0 12px 16px;
+    margin-bottom: 16px;
+
+    &--message {
+      height: 118px;
+      padding: 12px 0 82px 16px;
+    }
+  }
+
+  &__text {
+    margin-left: 16px;
+    font-size: $font-size;
+    width: 280px;
+  }
+
+  &__link {
+    &--rose {
+      text-decoration: none;
+      color: $rose-button;
+      font-weight: $font-weight--medium;
+    }
+  }
+
+  &__button {
+    position: relative;
+    background-image: url('../img/dropdown-white.svg');
+    background-repeat: no-repeat;
+    background-position: 85% 45%;
+    background-color: $rose-button;
+    border: 1px solid $rose-button;
+    border-radius: 30px;
+    text-transform: uppercase;
+    color: $background-color-secondary;
+    font-size: $font-size--button;
+    font-weight: $font-weight--bold;
+    height: 32px;
+    width: 146px;
+    vertical-align: bottom;
+    padding: 4px 40px 4px 12px;
+    margin-left: 168px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: 1440px) {
+    .aside-wrapper {
+      width: 440px;
+    }
+
+    &__button--close {
+      position: absolute;
+      left: -90px;
+      top: 10px;
+    }
+
+    &__label {
+      margin-top: 40px;
+      margin-left: 30px;
+    }
+
+    &__label::before {
+      bottom: -4px;
+      left: -30px;
+    }
+
+    &__input {
+      width: 376px;
+      margin-left: 32px;
+    }
+
+    &__text {
+      margin-left: 32px;
+      width: 376px;
+    }
+
+    &__button {
+      margin-left: 272px;
+    }
+
+    .screen-lg-hidden {
+      display: none;
+    }
+  }
+}
+
+.chat-menu--on {
+  height: 100svh;
+  right: 0;
+  position: fixed;
+  box-shadow: 16px 0 52px $shadow-color;
+  z-index: 6;
+  opacity: 1;
+  transform: translate(0);
+  transition: all 1s ease-out;
+}
