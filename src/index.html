@@ -6,14 +6,12 @@
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>Document</title>
-  <!-- <link rel="stylesheet" href="./src/fonts/stylesheet.css"> -->
-  <link rel="stylesheet" href="scss/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
+
 <body>
   <div class="flex-wrapper">
     <aside class="burger-menu burger-menu">
-      <div class="aside-wrapper">
+      <div class="aside-wrapper aside-wrapper-burger">
         <div class="logo-button-container">
           <div class="wrapper-button--close">
             <button class="burger-menu__button--close"></button>
@@ -71,19 +69,19 @@
       </div>
     </aside>
     <aside class="call-menu">
-      <div class="aside-wrapper">
+      <div class="aside-wrapper aside-wrapper-call">
         <button class="call-button--close call-menu__button--close"></button>
         <form action="" class="call-form call-menu__form">
           <h2 class="call-menu__label">Заказать звонок</h2>
           <input id="phone" type="tel" class="call-menu__input" placeholder="Телефон" required>
           <p class="call-menu__text">Нажимая “отправить”, вы даете согласие на <a href=""
-              class="call-menu__link--rose">обработку персональных данных <br class="screen-lg-hidden"> </a>и соглашаетесь с нашей <a href=""
-              class="call-menu__link--rose">политикой конфиденциальности</a></p>
+              class="call-menu__link--rose">обработку персональных данных <br class="screen-lg-hidden"> </a>и
+            соглашаетесь с нашей <a href="" class="call-menu__link--rose">политикой конфиденциальности</a></p>
           <button class="call-menu__button" type="submit">ОТПРАВИТЬ</button>
         </form>
       </div>
     </aside>
-    <aside class="chat-menu">
+    <aside class="chat-menu aside-wrapper-chat">
       <div class="aside-wrapper">
         <button class="chat-button--close chat-menu__button--close"></button>
         <form action="" class="chat-form chat-menu__form">
@@ -94,8 +92,8 @@
           <input id="message" type="text" class="chat-menu__input chat-menu__input--message" placeholder="Сообщение"
             required>
           <p class="chat-menu__text">Нажимая “отправить”, вы даете согласие на <a href=""
-              class="chat-menu__link--rose">обработку персональных данных <br class="screen-lg-hidden"> </a>и соглашаетесь с нашей <a href=""
-              class="chat-menu__link--rose">политикой конфиденциальности</a></p>
+              class="chat-menu__link--rose">обработку персональных данных <br class="screen-lg-hidden"> </a>и
+            соглашаетесь с нашей <a href="" class="chat-menu__link--rose">политикой конфиденциальности</a></p>
           <button class="chat-menu__button" type="submit">ОТПРАВИТЬ</button>
         </form>
       </div>
@@ -131,44 +129,46 @@
         </nav>
       </header>
       <main class="main-page">
-        <div class="container--blur">
-          <div class="heading-button-wrapper">
-            <h1 class="main-page__heading heading">Услуги и сервисы</h1>
-            <span class="main-page__button-text screen-md-hidden screen-sm-hidden">Оставить заявку</span>
-            <button class="main-page__button main-page__button--repair main-page__button--rose-circle screen-md-hidden screen-sm-hidden"></button>
-            <span class="main-page__button-text screen-md-hidden screen-sm-hidden">Статус ремонта</span>
-            <button class="main-page__button main-page__button--checkstatus main-page__button--rose-circle screen-md-hidden screen-sm-hidden"></button>
-          </div>
-          <nav class="main-page__menu-navigation menu-navigation">
-            <ul class="main-page__menu menu">
-              <li class="main-page__menu-item menu-item"><a href="#brands" class="main-page__link">Ремонтируемые
-                  устройства</a></li>
-              <li class="main-page__menu-item menu-item"><a href="#types" class="main-page__link">Дополнительные
-                  услуги</a></li>
-              <li class="main-page__menu-item menu-item"><a href="#price" class="main-page__link">Цены на услуги</a>
-              </li>
-              <li class="main-page__menu-item menu-item"><a href="" class="main-page__link">Адреса сервисных центров</a>
-              </li>
-              <li class="main-page__menu-item menu-item"><a href="" class="main-page__link">Специальные цены</a></li>
-              <li class="main-page__menu-item menu-item"><a href="" class="main-page__link">Отзывы</a></li>
-            </ul>
-          </nav>
-          <div class="main-page__flex-text-image-container">
-            <div class="main-page__text-container">
+        <div class="heading-button-wrapper">
+          <h1 class="main-page__heading heading">Услуги и сервисы</h1>
+          <span class="main-page__button-text screen-md-hidden screen-sm-hidden">Оставить заявку</span>
+          <button
+            class="main-page__button main-page__button--repair main-page__button--rose-circle screen-md-hidden screen-sm-hidden"></button>
+          <span class="main-page__button-text screen-md-hidden screen-sm-hidden">Статус ремонта</span>
+          <button
+            class="main-page__button main-page__button--checkstatus main-page__button--rose-circle screen-md-hidden screen-sm-hidden"></button>
+        </div>
+        <nav class="main-page__menu-navigation menu-navigation">
+          <ul class="main-page__menu menu">
+            <li class="main-page__menu-item menu-item"><a href="#brands" class="main-page__link">Ремонтируемые
+                устройства</a></li>
+            <li class="main-page__menu-item menu-item"><a href="#types" class="main-page__link">Дополнительные
+                услуги</a></li>
+            <li class="main-page__menu-item menu-item"><a href="#price" class="main-page__link">Цены на услуги</a>
+            </li>
+            <li class="main-page__menu-item menu-item"><a href="" class="main-page__link">Адреса сервисных центров</a>
+            </li>
+            <li class="main-page__menu-item menu-item"><a href="" class="main-page__link">Специальные цены</a></li>
+            <li class="main-page__menu-item menu-item"><a href="" class="main-page__link">Отзывы</a></li>
+          </ul>
+        </nav>
+        <div class="main-page__flex-text-image-container">
+          <div class="text-button-wrapper">
+            <div class="main-page__text-container text-container">
               <p class="main-page__paragraph">
                 Мы являемся авторизованным
                 сервисным центром по ремонту техники
                 Dell. Только у нас вы можете
                 отремонтировать свой ноутбук Dell с
                 официальной гарантией производителя.</p>
-              <p class="main-page__paragraph paragraph screen-sm-hidden">
+              <p class="main-page__paragraph paragraph">
                 Мы успешно работаем с 1992 года и заслужили репутацию надежного
-                партнера, <span class="screen-md-hidden paragraph">что подтверждает большое количество постоянных
+                партнера, <span class="paragraph">что подтверждает большое количество постоянных
                   клиентов.
                   Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
                   очередь, советуют нас родным и близким.</span>
               </p>
-              <p class="main-page__paragraph paragraph screen-md-hidden screen-sm-hidden screen-lg-hidden">
+              <p class="main-page__paragraph paragraph">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -177,191 +177,210 @@
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
                 laborum.
               </p>
-              <button class="main-page__button-more button-more">Читать далее</button>
             </div>
-            <div class="main-page__image-container">
-              <img src="img/logo.jpg" alt="Логотип CPS" class="main-page__image-logo">
-            </div>
+            <button class="main-page__button-more button-more">Читать далее</button>
           </div>
-          <section id="brands" class="main-page__section main-page__section--brands">
-            <div class="main-page__heading-container">
-              <h2 class="main-page__heading--second heading--second">Ремонт техники различных брендов</h2>
+          <div class="main-page__image-container">
+            <img src="img/logo.jpg" alt="Логотип CPS" class="main-page__image-logo">
+          </div>
+        </div>
+        <section id="brands" class="main-page__section main-page__section--brands">
+          <div class="main-page__heading-container">
+            <h2 class="main-page__heading--second heading--second">Ремонт техники различных брендов</h2>
+          </div>
+          <div class="swiper-menu-container">
+            <div class="swiper menu-container menu-container-brands">
+              <ul class="main-page__menu--brands main-page__menu-show swiper-wrapper">
+                <li class="main-page__menu-item menu-item--brands swiper-slide"><img src="img/Bitmap.png" alt=""
+                    class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
+                    class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
+                <li class="main-page__menu-item menu-item--brands swiper-slide"><img src="img/Bitmap-2.png" alt=""
+                    class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
+                    class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
+                <li class="main-page__menu-item menu-item--brands swiper-slide"><img src="img/Bitmap-3.png" alt=""
+                    class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
+                    class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
+                <li class="main-page__menu-item menu-item--brands swiper-slide"><img src="img/Bitmap-4.png" alt=""
+                    class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
+                    class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
+                <li class="main-page__menu-item menu-item--brands swiper-slide"><img src="img/Bitmap-5.png" alt=""
+                    class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
+                    class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
+                <li class="main-page__menu-item menu-item--brands swiper-slide"><img src="img/Bitmap-6.png" alt=""
+                    class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
+                    class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
+                <li class="main-page__menu-item menu-item--brands swiper-slide"><img src="img/Bitmap-7.png" alt=""
+                    class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
+                    class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
+                <li class="main-page__menu-item menu-item--brands swiper-slide"><img src="img/Bitmap-8.png" alt=""
+                    class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
+                    class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
+                <li class="main-page__menu-item menu-item--brands swiper-slide"><img src="img/Bitmap-6.png" alt=""
+                    class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
+                    class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
+                <li class="main-page__menu-item menu-item--brands swiper-slide"><img src="img/Bitmap-2.png" alt=""
+                    class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
+                    class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
+                <li class="main-page__menu-item menu-item--brands swiper-slide"><img src="img/Bitmap-3.png" alt=""
+                    class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
+                    class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
+              </ul>
+              <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-menu-container">
-              <div class="swiper menu-container">
-                <ul class="main-page__menu--brands main-page__menu-show swiper-wrapper">
-                  <li class="main-page__menu-item menu-item--brands swiper-slide"><img src="img/Bitmap.png" alt=""
-                      class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
-                      class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
-                  <li class="main-page__menu-item menu-item--brands swiper-slide"><img src="img/Bitmap-2.png" alt=""
-                      class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
-                      class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
-                  <li class="main-page__menu-item menu-item--brands swiper-slide"><img src="img/Bitmap-3.png" alt=""
-                      class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
-                      class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
-                  <li class="main-page__menu-item menu-item--brands swiper-slide"><img src="img/Bitmap-4.png" alt=""
-                      class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
-                      class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
-                  <li class="main-page__menu-item menu-item--brands swiper-slide"><img src="img/Bitmap-5.png" alt=""
-                      class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
-                      class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
-                  <li class="main-page__menu-item menu-item--brands swiper-slide"><img src="img/Bitmap-6.png" alt=""
-                      class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
-                      class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
-                  <li class="main-page__menu-item menu-item--brands swiper-slide screen-md-hidden"><img
-                      src="img/Bitmap-7.png" alt=""
-                      class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
-                      class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
-                  <li class="main-page__menu-item menu-item--brands swiper-slide screen-md-hidden"><img
-                      src="img/Bitmap-8.png" alt=""
-                      class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
-                      class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
-                  <li class="main-page__menu-item menu-item--brands swiper-slide screen-md-hidden screen-lg-hidden"><img
-                      src="img/Bitmap-6.png" alt=""
-                      class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
-                      class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
-                  <li class="main-page__menu-item menu-item--brands swiper-slide screen-md-hidden screen-lg-hidden"><img
-                      src="img/Bitmap-2.png" alt=""
-                      class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
-                      class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
-                  <li class="main-page__menu-item menu-item--brands swiper-slide screen-md-hidden screen-lg-hidden"><img
-                      src="img/Bitmap-3.png" alt=""
-                      class="main-page__menu-image--brands menu-image--brands swiper__image"><a href=""
-                      class="swiper__link main-page__menu-link--brands menu-link--brands"></a></li>
-                </ul>
-                <div class="swiper-pagination"></div>
-              </div>
-              <button class="main-page__button-dropdown button-dropdown screen-sm-hidden"><span
-                  class="button--show">Показать все</span><span class="button--hide hidden">Скрыть</span></button>
+            <button class="main-page__button-dropdown button-dropdown screen-sm-hidden"><span
+                class="button--show">Показать все</span><span class="button--hide hidden">Скрыть</span></button>
+          </div>
+        </section>
+        <section class="main-page__section main-page__section--types" id="types">
+          <div class="main-page__heading-container">
+            <h2 class="main-page__heading--second heading--second">Ремонт различных видов техники</h2>
+          </div>
+          <div class="swiper-menu-container">
+            <div class="swiper menu-container menu-container-types">
+              <ul class="main-page__menu--types main-page__menu-show swiper-wrapper">
+                <li class="main-page__menu-item menu-item--types swiper-slide">Ремонт ноутбуков<a href=""
+                    class="swiper__link main-page__menu-link--types menu-link--types"></a></li>
+                <li class="main-page__menu-item menu-item--types swiper-slide">Ремонт планшетов<a href=""
+                    class="swiper__link main-page__menu-link--types menu-link--types"></a></li>
+                <li class="main-page__menu-item menu-item--types swiper-slide">Ремонт ПК<a href=""
+                    class="swiper__link main-page__menu-link--types menu-link--types"></a></li>
+                <li class="main-page__menu-item menu-item--types swiper-slide">Ремонт мониторов<a href=""
+                    class="swiper__link main-page__menu-link--types menu-link--types"></a></li>
+                <li class="main-page__menu-item menu-item--types swiper-slide">
+                  Ремонт ноутбуков<a href="" class="swiper__link main-page__menu-link--types menu-link--types"></a>
+                </li>
+                <li class="main-page__menu-item menu-item--types swiper-slide">
+                  Ремонт планшетов<a href="" class="swiper__link main-page__menu-link--types menu-link--types"></a>
+                </li>
+                <li class="main-page__menu-item menu-item--types swiper-slide">
+                  Ремонт ПК<a href="" class="swiper__link main-page__menu-link--types menu-link--types"></a></li>
+                <li class="main-page__menu-item menu-item--types swiper-slide">
+                  Ремонт мониторов<a href="" class="swiper__link main-page__menu-link--types menu-link--types"></a>
+                </li>
+                <li class="main-page__menu-item menu-item--types swiper-slide">
+                  Ремонт ноутбуков<a href="" class="swiper__link main-page__menu-link--types menu-link--types"></a>
+                </li>
+                <li class="main-page__menu-item menu-item--types swiper-slide">
+                  Ремонт планшетов<a href="" class="swiper__link main-page__menu-link--types menu-link--types"></a>
+                </li>
+                <li class="main-page__menu-item menu-item--types swiper-slide">
+                  Ремонт ПК<a href="" class="swiper__link main-page__menu-link--types menu-link--types"></a></li>
+              </ul>
+              <div class="swiper-pagination"></div>
             </div>
-          </section>
-          <section class="main-page__section main-page__section--types" id="types">
-            <div class="main-page__heading-container">
-              <h2 class="main-page__heading--second heading--second">Ремонт различных видов техники</h2>
-            </div>
-            <div class="swiper-menu-container">
-              <div class="swiper menu-container">
-                <ul class="main-page__menu--types main-page__menu-show swiper-wrapper">
-                  <li class="main-page__menu-item menu-item--types swiper-slide">Ремонт ноутбуков<a href=""
-                      class="swiper__link main-page__menu-link--types menu-link--types"></a></li>
-                  <li class="main-page__menu-item menu-item--types swiper-slide">Ремонт планшетов<a href=""
-                      class="swiper__link main-page__menu-link--types menu-link--types"></a></li>
-                  <li class="main-page__menu-item menu-item--types swiper-slide">Ремонт ПК<a href=""
-                      class="swiper__link main-page__menu-link--types menu-link--types"></a></li>
-                  <li class="main-page__menu-item menu-item--types swiper-slide screen-md-hidden">Ремонт мониторов<a
-                      href="" class="swiper__link main-page__menu-link--types menu-link--types"></a></li>
-                  <li class="main-page__menu-item menu-item--types swiper-slide screen-md-hidden screen-lg-hidden">
-                    Ремонт ноутбуков<a href="" class="swiper__link main-page__menu-link--types menu-link--types"></a>
-                  </li>
-                  <li class="main-page__menu-item menu-item--types swiper-slide screen-md-hidden screen-lg-hidden">
-                    Ремонт планшетов<a href="" class="swiper__link main-page__menu-link--types menu-link--types"></a>
-                  </li>
-                  <li class="main-page__menu-item menu-item--types swiper-slide screen-md-hidden screen-lg-hidden">
-                    Ремонт ПК<a href="" class="swiper__link main-page__menu-link--types menu-link--types"></a></li>
-                  <li class="main-page__menu-item menu-item--types swiper-slide screen-md-hidden screen-lg-hidden">
-                    Ремонт мониторов<a href="" class="swiper__link main-page__menu-link--types menu-link--types"></a>
-                  </li>
-                  <li class="main-page__menu-item menu-item--types swiper-slide screen-md-hidden screen-lg-hidden">
-                    Ремонт ноутбуков<a href="" class="swiper__link main-page__menu-link--types menu-link--types"></a>
-                  </li>
-                  <li class="main-page__menu-item menu-item--types swiper-slide screen-md-hidden screen-lg-hidden">
-                    Ремонт планшетов<a href="" class="swiper__link main-page__menu-link--types menu-link--types"></a>
-                  </li>
-                  <li class="main-page__menu-item menu-item--types swiper-slide screen-md-hidden screen-lg-hidden">
-                    Ремонт ПК<a href="" class="swiper__link main-page__menu-link--types menu-link--types"></a></li>
-                </ul>
-                <div class="swiper-pagination"></div>
-              </div>
-              <button class="main-page__button-dropdown button-dropdown screen-sm-hidden"><span
-                  class="button--show1">Показать все</span><span class="button--hide1 hidden">Скрыть</span></button>
-            </div>
-          </section>
-          <section class="main-page__section main-page__section--price" id="price">
-            <div class="main-page__heading-container">
-              <h2 class="main-page__heading--second heading--second">Цены на услуги</h2>
-            </div>
-            <div class="swiper-menu-container">
-              <div class="swiper menu-container">
-                <div class="screen-sm-hidden main-page__heading-wrapper">
-                  <h3 class="main-page__heading--third heading--third heading--third heading-types">Ремонтные услуги
-                  </h3>
-                  <h3 class="main-page__heading--third heading--third heading-price">Цена</h3>
-                  <h3 class="main-page__heading--third heading--third heading-time">Срок</h3>
-                </div>
-                <ul class="main-page__menu--price main-page__menu-show swiper-wrapper">
-                  <li class="main-page__menu-price menu-item--price swiper-slide">
-                    <h3 class="main-page__heading--third heading--third screen-md-hidden screen-lg-hidden">Ремонтные
+            <button class="main-page__button-dropdown button-dropdown screen-sm-hidden"><span
+                class="button--show1">Показать все</span><span class="button--hide1 hidden">Скрыть</span></button>
+          </div>
+        </section>
+        <section class="main-page__section main-page__section--price" id="price">
+          <div class="main-page__heading-container heading--second-price">
+            <h2 class="main-page__heading--second heading--second">Цены на услуги</h2>
+          </div>
+          <div class="swiper-menu-container">
+            <div class="swiper menu-container menu-container-price">
+              <ul class="main-page__menu--price main-page__menu-show swiper-wrapper">
+                <li class="main-page__menu-price menu-item--price swiper-slide">
+                  <div class="main-page__menu-item-wrapper  main-page__menu-service">
+                    <h3 class="main-page__heading--third heading--third">Ремонтные
                       услуги</h3>
                     <span class="main-page__menu-text">Диагностика</span>
-                    <h3 class="main-page__heading--third heading--third screen-md-hidden screen-lg-hidden">Цена</h3>
+                  </div>
+                  <div class="main-page__menu-item-wrapper main-page__menu-price">
+                    <h3 class="main-page__heading--third heading--third">Цена</h3>
                     <span class="main-page__menu-text main-page__menu-text-price">Бесплатно</span>
-                    <h3 class="main-page__heading--third heading--third screen-md-hidden screen-lg-hidden">Срок</h3>
+                  </div>
+                  <div class="main-page__menu-item-wrapper main-page__menu-time">
+                    <h3 class="main-page__heading--third heading--third">Срок</h3>
                     <span class="main-page__menu-text main-page__menu-text-time">30 мин</span>
-                    <a href="" class="swiper__link main-page__menu-link--price menu-link--price"><span
-                        class="main-page__link-text">Заказать</span></a>
-                  </li>
-                  <div class="main-page__divider-price"></div>
-                  <li class="main-page__menu-price menu-item--price swiper-slide">
+                  </div>
+                  <a href="" class="swiper__link main-page__menu-link--price menu-link--price"><span
+                      class="main-page__link-text">Заказать</span></a>
+                </li>
+                <div class="main-page__divider-price"></div>
+                <li class="main-page__menu-price menu-item--price swiper-slide">
+                  <div class="main-page__menu-item-wrapper main-page__menu-service">
                     <h3 class="main-page__heading--third heading--third screen-md-hidden screen-lg-hidden">Ремонтные
                       услуги</h3>
                     <span class="main-page__menu-text">Замена дисплея</span>
+                  </div>
+                  <div class="main-page__menu-item-wrapper main-page__menu-price">
                     <h3 class="main-page__heading--third heading--third screen-md-hidden screen-lg-hidden">Цена</h3>
                     <span class="main-page__menu-text main-page__menu-text-price">1 000 ₽</span>
+                  </div>
+                  <div class="main-page__menu-item-wrapper main-page__menu-time">
                     <h3 class="main-page__heading--third heading--third screen-md-hidden screen-lg-hidden">Срок</h3>
                     <span class="main-page__menu-text main-page__menu-text-time">30-120 мин</span>
-                    <a href="" class="swiper__link main-page__menu-link--price menu-link--price"><span
-                        class="main-page__link-text">Заказать</span></a>
-                  </li>
-                  <div class="main-page__divider-price"></div>
-                  <li class="main-page__menu-price menu-item--price swiper-slide">
+                  </div>
+                  <a href="" class="swiper__link main-page__menu-link--price menu-link--price"><span
+                      class="main-page__link-text">Заказать</span></a>
+                </li>
+                <div class="main-page__divider-price"></div>
+                <li class="main-page__menu-price menu-item--price swiper-slide">
+                  <div class="main-page__menu-item-wrapper main-page__menu-service">
                     <h3 class="main-page__heading--third heading--third screen-md-hidden screen-lg-hidden">Ремонтные
                       услуги</h3>
-                    <span class="main-page__menu-text">Замена полифонического<br>динамика</span>
+                    <span class="main-page__menu-text">Замена полифонического динамика</span>
+                  </div>
+                  <div class="main-page__menu-item-wrapper main-page__menu-price">
                     <h3 class="main-page__heading--third heading--third screen-md-hidden screen-lg-hidden">Цена</h3>
                     <span class="main-page__menu-text main-page__menu-text-price">1 000 ₽</span>
+                  </div>
+                  <div class="main-page__menu-item-wrapper main-page__menu-time">
                     <h3 class="main-page__heading--third heading--third screen-md-hidden screen-lg-hidden">Срок</h3>
                     <span class="main-page__menu-text main-page__menu-text-time">30-120 мин</span>
-                    <a href="" class="swiper__link main-page__menu-link--price menu-link--price"><span
-                        class="main-page__link-text">Заказать</span></a>
-                  </li>
-                  <div class="main-page__divider-price"></div>
-                  <li class="main-page__menu-price menu-item--price swiper-slide">
+                  </div>
+                  <a href="" class="swiper__link main-page__menu-link--price menu-link--price"><span
+                      class="main-page__link-text">Заказать</span></a>
+                </li>
+                <div class="main-page__divider-price"></div>
+                <li class="main-page__menu-price menu-item--price swiper-slide">
+                  <div class="main-page__menu-item-wrapper main-page__menu-service">
                     <h3 class="main-page__heading--third heading--third screen-md-hidden screen-lg-hidden">Ремонтные
                       услуги</h3>
                     <span class="main-page__menu-text">Тестирование с выдачей технического заключения</span>
+                  </div>
+                  <div class="main-page__menu-item-wrapper main-page__menu-price">
                     <h3 class="main-page__heading--third heading--third screen-md-hidden screen-lg-hidden">Цена</h3>
                     <span class="main-page__menu-text main-page__menu-text-price">1 000 ₽</span>
+                  </div>
+                  <div class="main-page__menu-item-wrapper main-page__menu-time">
                     <h3 class="main-page__heading--third heading--third screen-md-hidden screen-lg-hidden">Срок</h3>
                     <span class="main-page__menu-text main-page__menu-text-time">30-120 мин</span>
-                    <a href="" class="swiper__link main-page__menu-link--price menu-link--price"><span
-                        class="main-page__link-text">Заказать</span></a>
-                  </li>
-                  <div class="main-page__divider-price"></div>
-                  <li class="main-page__menu-price menu-item--price swiper-slide">
+                  </div>
+                  <a href="" class="swiper__link main-page__menu-link--price menu-link--price"><span
+                      class="main-page__link-text">Заказать</span></a>
+                </li>
+                <div class="main-page__divider-price"></div>
+                <li class="main-page__menu-price menu-item--price swiper-slide">
+                  <div class="main-page__menu-item-wrapper main-page__menu-service">
                     <h3 class="main-page__heading--third heading--third screen-md-hidden screen-lg-hidden">Ремонтные
                       услуги</h3>
                     <span class="main-page__menu-text">Замена программного обеспечения</span>
+                  </div>
+                  <div class="main-page__menu-item-wrapper main-page__menu-price">
                     <h3 class="main-page__heading--third heading--third screen-md-hidden screen-lg-hidden">Цена</h3>
                     <span class="main-page__menu-text main-page__menu-text-price">1 000 ₽</span>
+                  </div>
+                  <div class="main-page__menu-item-wrapper main-page__menu-time">
                     <h3 class="main-page__heading--third heading--third screen-md-hidden screen-lg-hidden">Срок</h3>
                     <span class="main-page__menu-text main-page__menu-text-time">30-120 мин</span>
-                    <a href="" class="swiper__link main-page__menu-link--price menu-link--price"><span
-                        class="main-page__link-text">Заказать</span></a>
-                  </li>
-                </ul>
-                <div class="swiper-pagination"></div>
-              </div>
+                  </div>
+                  <a href="" class="swiper__link main-page__menu-link--price menu-link--price"><span
+                      class="main-page__link-text">Заказать</span></a>
+                </li>
+              </ul>
+              <div class="swiper-pagination"></div>
             </div>
-          </section>
-          <section class="main-page__section main-page__section--offer">
-            <p class="main-page__text--offer">Все цены указаны с учетом НДС.
-              Стоимость ремонта указана на единичную услугу. Для получения
-              коммерческого предложения на
-              постоянное обслуживание, оставьте
-              заявку.</p>
-            <a href="" class="main-page__link--offer">Получить коммерческое предложение</a>
-          </section>
-        </div>
+          </div>
+        </section>
+        <section class="main-page__section main-page__section--offer">
+          <p class="main-page__text--offer">Все цены указаны с учетом НДС.
+            Стоимость ремонта указана на единичную услугу. Для получения
+            коммерческого предложения на
+            постоянное обслуживание, оставьте
+            заявку.</p>
+          <a href="" class="main-page__link--offer">Получить коммерческое предложение</a>
+        </section>
         <footer class="footer">
           <p class="footer__copyright">&#169; 2019 CPS<br>
             Разработано командой Apesong</p>
@@ -369,12 +388,8 @@
           <p class="footer__info">Информация, размещенная на данной странице, не является публичной офертой</p>
         </footer>
       </main>
-
-
     </div>
   </div>
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" type="text/javascript"></script>
-  <script src="js/script.js" type="text/javascript"></script>
 </body>
 
 </html>

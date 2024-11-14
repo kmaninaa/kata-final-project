@@ -36,36 +36,51 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader, // Extract css to separate file
-          'css-loader', // translates CSS into CommonJS
-          'postcss-loader', // parse CSS and add vendor prefixes to CSS rules
-          'sass-loader', // compiles Sass to CSS, using Node Sass by default
+          MiniCssExtractPlugin.loader, // Вынести CSS в отдельный файл
+          'css-loader', // Преобразует CSS в CommonJS
+          'postcss-loader', // Добавляет вендорные префиксы
+          'sass-loader', // Компилирует Sass в CSS
         ],
       },
 
-      // Подключаем шрифты из css
+      // Компилируем обычный CSS
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+        ],
+      },
+
+      // Подключаем шрифты из CSS
       {
         test: /\.(eot|ttf|woff|woff2)$/,
         use: [
           {
-            loader: 'file-loader?name=./fonts/[name].[ext]'
+            loader: 'file-loader',
+            options: {
+              name: './fonts/[name].[ext]',
+            },
           },
-        ]
+        ],
       },
 
-      // Подключаем картинки из css
+      // Подключаем картинки из CSS
       {
         test: /\.(svg|png|jpg|jpeg|webp)$/,
         use: [
           {
-            loader: 'file-loader?name=./static/[name].[ext]'
+            loader: 'file-loader',
+            options: {
+              name: './static/[name].[ext]',
+            },
           },
-        ]
+        ],
       },
     ],
   },
   plugins: [
-    // Подключаем файл html, стили и скрипты встроятся автоматически
+    // Подключаем файл HTML, стили и скрипты встроятся автоматически
     new HtmlWebpackPlugin({
       title: 'Webpack 4 Starter',
       template: './src/index.html',

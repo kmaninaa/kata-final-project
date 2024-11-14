@@ -2,7 +2,6 @@
   width: 100%;
   height: 100svh;
   position: absolute;
-  z-index: 4;
   right: -1500px;
   top: 0;
   background-color: $background-color-secondary--transparent;
@@ -158,7 +157,7 @@
   right: 0;
   position: fixed;
   box-shadow: 16px 0 52px $shadow-color;
-  z-index: 6;
+  z-index: 100;
   opacity: 1;
   transform: translate(0);
   transition: all 1s ease-out;

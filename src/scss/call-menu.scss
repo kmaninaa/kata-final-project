@@ -2,7 +2,6 @@
   min-width: 100%;
   min-height: 100%;
   position: absolute;
-  z-index: 4;
   right: -1500px;
   top: 0;
   background-color: $background-color-secondary--transparent;
@@ -160,7 +159,7 @@
   height: 100svh;
   right: 0;
   position: fixed;
-  z-index: 6;
+  z-index: 100;
   transform: translate(0);
   opacity: 1;
   transition: all 1s ease-out;
