@@ -214,44 +214,6 @@
           margin-bottom: 16px;
       }
 
-      .link-mail-container {
-          margin-bottom: 12px;
-      }
-
-      &__link--mail {
-          color: $text-color-primary;
-          text-decoration: none;
-          font-size: $font-size-secondary;
-      }
-
-      .link-number-container {
-          margin-bottom: 41px;
-      }
-
-      &__link--number {
-          color: $text-color-primary;
-          font-size: $font-size--h2;
-          text-decoration: none;
-          font-weight: $font-weight--bold;
-      }
-
-      &__list-lang {
-          display: flex;
-      }
-
-      &__list-item-lang {
-          margin-right: 7px;
-      }
-
-      &__link-lang {
-          text-decoration: none;
-          color: $text-color-primary;
-      }
-
-      &__link-lang:visited, &__link-lang:focus, &__link-lang:hover, &__link-lang:active {
-          color: $text-color-secondary;
-      }
-
       .screen-md-hidden {
           display: flex;
       }

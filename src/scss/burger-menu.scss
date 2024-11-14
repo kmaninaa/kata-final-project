@@ -11,6 +11,8 @@
   transition: all 1s ease-in;
 
   .aside-wrapper {
+    display: flex;
+    flex-direction: column;
     width: 320px;
     float: left;
     box-shadow: 16px 0 52px $shadow-color;
@@ -76,6 +78,8 @@
       display: flex;
       flex-direction: column;
       margin-left: 16px;
+      margin-top: auto;
+      margin-bottom: 32px;
   }
 
   &__list-item {
@@ -136,10 +140,6 @@
 
   &__nav-item--rose-circle {
       margin-right: 16px;
-  }
-
-  &__nav-item--rose-circle:first-child {
-      margin-left: 16px;
   }
 
   .nav-item--call {
