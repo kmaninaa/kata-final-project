@@ -10,6 +10,10 @@ body {
   height: 100%;
   font-family: 'TT Lakes'; }
 
+.flex-wrapper {
+  max-width: 1440px;
+  margin: 0 auto; }
+
 .container--blur-on {
   opacity: 0.1;
   filter: blur(2px);
